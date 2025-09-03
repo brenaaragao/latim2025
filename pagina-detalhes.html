@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curiosidades sobre o Mandarim</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Botão Página Inicial fixo -->
+  <button id="homeButton">VOLTAR</button>
+
+  <!-- Cabeçalho moderno -->
+  <header class="header-main">
+    <h1>Curiosidades sobre o Mandarim</h1>
+    <p class="subtitle">Descubra fatos incríveis sobre a língua mais falada do mundo!</p>
+  </header>
+
+  <!-- Aba do tema com imagem horizontal -->
+<figure>
+  <img src="img/imagem2.png" alt="Descrição da imagem">
+  <figcaption>
+    Fonte: Nanquim, a antiga capital das seis dinastias. Disponível em: 
+    <a href="https://www.thechinajourney.com/pt/nanquim/" target="_blank">
+      https://www.thechinajourney.com/pt/nanquim/
+    </a>.
+  </figcaption>
+</figure>
+
+
+  <!-- Conteúdo principal -->
+  <main class="content">
+
+    <!-- Seção de curiosidades moderna -->
+    <section class="curiosidades-modernas">
+      <div class="curiosidade-modern">
+        <div class="icon">🔢</div>
+        <div class="text">
+          <h3>Numeral quatro</h3>
+          <p>Você sabia que o numeral <span class="numero-quatro">4</span> é considerado um número que traz azar na China?
+            </p>
+          <button class="btn-saiba">Saiba mais</button>
+          <p class="extra"> Por esse motivo ele não é utilizado em números de telefone,
+          hospitais e nem em andares de prédios na China, pois dependendo do tom usado, o numeral 4 (四, sì) 
+           pode significar "morte" (死, sǐ), por isso seu uso é evitado.</p>
+        </div>
+      </div>
+
+      <div class="curiosidade-modern">
+        <div class="icon">🌐</div>
+        <div class="text">
+          <h3>Língua mais falada do mundo</h3>
+          <p> Você sabia que, assim como o latim foi durante o Império Romano,
+             o mandarim é atualmente a língua mais falada do mundo?</p>
+          <button class="btn-saiba">Saiba mais</button>
+          <p class="extra">Isso se deve ao fato de ser a língua oficial da China, 
+            um país de proporções continentais e com uma população extremamente numerosa. 
+            No entanto, é importante destacar que sua presença vai além das fronteiras chinesas. 
+            No Brasil, por exemplo, há quem acredite que o mandarim se tornará cada vez mais essencial 
+            tanto para a comunicação cotidiana, em razão do crescimento da comunidade chinesa no país, 
+            quanto como diferencial competitivo no mercado de trabalho.</p>
+        </div>
+      </div>
+
+      <div class="curiosidade-modern">
+        <div class="icon">📚</div>
+        <div class="text">
+          <h3>Idioma de influência</h3>
+          <p>Você sabia que, assim como o latim influenciou as línguas chamadas de línguas românicas, 
+            o mandarim influenciou outras línguas asiáticas?</p>
+          <button class="btn-saiba">Saiba mais</button>
+          <p class="extra">O mandarim também exerceu um papel fundamental na formação de outras línguas asiáticas
+            Pois é! Muito além de ser apenas o idioma oficial da China, o mandarim influenciou profundamente a
+            estrutura e o vocabulário de diversas línguas da Ásia Oriental, como o coreano, o japonês e o vietnamita.
+            Essa influência 
+            não se limita a palavras isoladas: trata-se de séculos de intercâmbio cultural, 
+            filosófico e político que moldaram a forma como povos inteiros se comunicam até hoje.
+            Por exemplo, muitos caracteres usados na escrita japonesa (os kanji) vieram diretamente do chinês antigo.
+            No coreano, apesar da escrita ser diferente, há uma enorme quantidade de termos com origem chinesa. 
+            O mesmo ocorre no vietnamita, que por muito tempo usou caracteres chineses antes de adotar o alfabeto latino.
+            Ou seja, o mandarim é muito mais do que uma língua falada por mais de um bilhão de pessoas
+            é uma peça-chave na história linguística e cultural de boa parte do continente asiático. 
+            Fascinante, não é?.</p>
+        </div>
+      </div>
+
+      <div class="curiosidade-modern">
+        <div class="icon">🎓</div>
+        <div class="text">
+          <h3>Quer aprender mandarim?</h3>
+          <ul>
+            <li><strong>YouTube:</strong> Mandarim Com A Lin e Xiao Mandarim – Curso de chinês GRATUITO.</li>
+            <li><strong>Aplicativos:</strong> HelloChinese e duolingo.</li>
+            <li><strong>Cursos online:</strong> Clube de Chinês.</li>
+            <li><strong>C-dramas:</strong> Amor Oculto (Netflix) e Quando Voo em sua Direção (Netflix e Viki).</li>
+            <li><strong>Músicas:</strong> Forever Star - Zhang Yi Hao e Slowly – Yihuik.</li>
+          </ul>
+        </div>
+      </div>
+ <div class="curiosidade-modern">
+        <div class="icon">🎓</div>
+        <div class="text">
+          <h3>Feito por:</h3>
+          <ul>
+            <li>Evilly Leticia V. Santos</li>
+            <li>Fernanda Vitória Da S. Santos</li>
+            <li> Wendel Santos Oliveira</li>
+          
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JS -->
+  <script>
+    // Botão voltar para página inicial
+    const btnHome = document.getElementById('homeButton');
+    btnHome.addEventListener('click', () => {
+      window.location.href = 'index.html'; // Substitua pelo nome da sua página inicial
+    });
+
+    // Mostrar "Saiba mais"
+    const btnsSaiba = document.querySelectorAll('.btn-saiba');
+    btnsSaiba.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const extra = btn.nextElementSibling;
+        extra.style.display = extra.style.display === 'none' || extra.style.display === '' ? 'block' : 'none';
+        btn.textContent = extra.style.display === 'block' ? 'Mostrar menos' : 'Saiba mais';
+      });
+    });
+  </script>
+
+</body>
+</html>
