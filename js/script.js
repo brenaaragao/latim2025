@@ -1,7 +1,7 @@
 const canvas = document.getElementById('matrix');
 const ctx = canvas.getContext('2d');
 
-// Ajusta o tamanho do canvas
+// Ajusta o tamanho do canvas para caber no container
 function setCanvasSize() {
   canvas.width = canvas.parentElement.offsetWidth;
   canvas.height = canvas.parentElement.offsetHeight;
@@ -47,7 +47,7 @@ window.addEventListener('resize', () => {
 // Botão voltar para página inicial
 const btnHome = document.getElementById('homeButton');
 btnHome.addEventListener('click', () => {
-  window.location.href = 'index.html'; // Substitua pelo caminho correto
+  window.location.href = 'index.html'; // Substitua pelo caminho correto da sua página inicial
 });
 
 // Botões "Saiba mais" das curiosidades
