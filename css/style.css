@@ -37,7 +37,7 @@ body {
   max-width: 100%;
   max-height: 100%;
   border-radius: 12px;
-  object-fit: cover;
+  object-fit: cover; /* padrão em telas grandes */
   position: relative;
   top: -40px; /* ajusta posição */
   z-index: 1; /* fica acima do canvas */
@@ -184,6 +184,12 @@ body {
   }
   .tema-principal h2 {
     font-size: 1.5rem;
+  }
+
+  /* 🔥 Correção: imagem inteira no celular */
+  .hero-image img {
+    object-fit: contain;
+    top: 0; /* centraliza melhor no mobile */
   }
 }
 :root {
@@ -624,3 +630,4 @@ html, body {
 .hero-image, .hero-text {
   height: 100%;
 }
+
